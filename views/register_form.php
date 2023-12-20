@@ -55,15 +55,25 @@
             </div>
         </div> 
         <div class="field">
+        <label class="label" for="nationality">Pays</label>
+        <div class="select">
+          <select name="country" id="country">
+            <?php foreach ($countries as $country): ?>
+              <option value="<?= $country['country_id'] ?>"><?= $country['name'] ?></option>
+            <?php endforeach ?>
+          </select>
+        </div>
+        </div> 
+        <div class="field">
           <label class="label" for="email">Email</label>
             <div class="control">
               <input class="input" type="email" name="email" id="email">
             </div>
         </div>
         <div class="field">
-          <label class="label" for="birthday">Date de naissance</label>
+          <label class="label" for="birthdate">Date de naissance</label>
           <div class="control">
-            <input class="input" type="date" name="birthday" id="birthday">
+            <input class="input" type="date" name="birthdate" id="birthdate">
           </div>
         </div> 
         <div class="field">
@@ -74,8 +84,12 @@
         </div> 
         <div class="field">
           <label class="label" for="nationality">Nationalité</label>
-          <div class="control">
-            <input class="input" type="text" name="nationality" id="nationality">
+          <div class="select">
+            <select name="nationality" id="nationality">
+              <?php foreach ($countries as $country): ?>
+                <option value="<?= $country['country_id'] ?>"><?= $country['name'] ?></option>
+              <?php endforeach ?>
+            </select>
           </div>
         </div> 
         <div class="field">
