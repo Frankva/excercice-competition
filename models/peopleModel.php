@@ -4,6 +4,9 @@ include_once "Model.php";
 
 class PeopleModel extends Model
 {
+    private $table_name = 'people';
+    private $table_id = 'person_id';
+
     public function insert_for_form(array $person): void
     {
         $sqlRequest = '
